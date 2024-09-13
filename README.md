@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+## React Splyt Driver App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here’s a screenshot of the application:
 
-## Available Scripts
+![Application Screenshot](screenshots/screenshot-react-splyt-driver-app.png)
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+To run the application locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/hafizuddinhashim/react-splyt-driver
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navigate to the project directory:
+    ```bash
+    cd react-splyt-driver
+    ```
 
-### `npm test`
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Run the application:
+    ```bash
+    npm start
+    ```
 
-### `npm run build`
+The app will be available at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Thinking Process
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This section outlines the thought process and decisions made during the development of this application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What I Have Done
 
-### `npm run eject`
+1. **Custom Hook - `useGetDriver`**
+    - Created a custom hook using `useQuery` from the React Query library for data fetching.
+    - In the `queryFn`, used `axios` for HTTP GET requests to handle API calls and responses.
+    - Implemented conditional rendering to manage UI updates and handle cases where data is still loading, ensuring a smooth user experience.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Material UI Slider**
+    - Utilized the Slider component from Material UI, an open-source React component library.
+    - Customized the slider for a better user experience, providing clear feedback as users adjust the slider.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **React-Leaflet Library for Map Display**
+    - Added the `react-leaflet` library to display the map.
+    - Followed the documentation provided by `react-leaflet`, and supplemented with additional resources to cover missing information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Why I Did It This Way
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Project Maintainability**
+    - Ensured modularization and separation of concerns for ease of maintenance and scalability.
 
-## Learn More
+2. **User Experience**
+    - Leveraged Material UI for its clean design and usability to enhance the user experience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Implementation Guidance**
+    - Chose libraries with comprehensive documentation to streamline development, especially considering my background primarily in backend tasks. This was my first time implementing a map feature in a web application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Considerations for the UI Slider
+
+1. **User Experience**
+    - Designed the slider to provide dynamic feedback, displaying the current value as users adjust it.
+
+2. **Styling**
+    - Customized the appearance of the slider for a more versatile and polished look.
+
+### Problems Faced and Solutions
+
+1. **Issue with React-Leaflet Integration**
+    - **Problem:** The map was not displaying correctly despite following the documentation.
+    - **Solution:** Researched additional resources, including YouTube tutorials. Discovered that the documentation was missing a step for importing Leaflet CSS, which resolved the issue.
+
+### Potential Improvements
+
+1. **Enhanced Features**
+    - Currently, the location (latitude and longitude) is static. Future enhancements could include adding a `TextField` to allow dynamic location input.
+
+2. **Testing**
+    - Plan to add unit tests for the features developed to ensure reliability and functionality.
