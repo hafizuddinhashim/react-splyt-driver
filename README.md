@@ -4,6 +4,20 @@ Here’s a screenshot of the application:
 
 ![Application Screenshot](screenshots/screenshot-react-splyt-driver-app.png)
 
+## Prerequisites
+
+Before you start running or developing the React application, ensure you have the following installed:
+
+1. **Node.js and npm**
+    - **Node.js**: A JavaScript runtime built on Chrome's V8 engine.
+    - **npm**: Node.js package manager for managing dependencies.
+    - **Installation**: Download and install from [nodejs.org](https://nodejs.org/). The installation of Node.js includes npm.
+
+   To check if Node.js and npm are installed, run:
+   ```bash
+   node -v
+   npm -v
+   
 ## Getting Started
 
 To run the application locally, follow these steps:
