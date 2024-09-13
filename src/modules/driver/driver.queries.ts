@@ -8,7 +8,7 @@ export const useGetDriver = (params: GetDriverParams) => {
     queryFn: async () => {
       const { latitude, longitude, count } = params;
       try {
-        const { data } = await axios.get('/api/drivers', {
+        const { data } = await axios.get('https://qa-interview-test.qa.splytech.dev/api/drivers', {
           params: { latitude, longitude, count }
         });
 
